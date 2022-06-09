@@ -53,20 +53,20 @@ public class PlayerMovement : MonoBehaviour
                 isMoving = false;
                 dragStarted = false;
             }
-            
-            gameObject.transform.rotation=Quaternion.RotateTowards(transform.rotation,CalculateRotation(),rotationSpeed*Time.deltaTime);
-            gameObject.transform.Translate(Vector3.forward*Time.deltaTime*movementSpeed);
+
+            gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
         }
     }
 
-    Quaternion CalculateRotation()
+    private Quaternion CalculateRotation()
     {
-        Quaternion temp = Quaternion.LookRotation(CalculateDirection(),Vector3.up);
+        Quaternion temp = Quaternion.LookRotation(CalculateDirection(), Vector3.up);
         return temp;
     }
-    Vector3 CalculateDirection()
+    private Vector3 CalculateDirection()
     {
-        Vector3 temp =(touchDown - touchUp).normalized;
+        Vector3 temp = (touchDown - touchUp).normalized;
         temp.z = temp.y;
         temp.y = 0;
         return temp;
