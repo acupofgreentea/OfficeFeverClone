@@ -43,9 +43,9 @@ public class PrinterController : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if(papers.Count <= 0) return;
+        if(papers.Count == 0) return;
 
-        if(playerController.papers.Count > 30) return;
+        if(playerController.papers.Count >= 30) return;
 
         var topPaper = papers[papers.Count - 1];
 
