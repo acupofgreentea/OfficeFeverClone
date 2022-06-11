@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 2452510603487133980}
   - component: {fileID: 2481865114063185710}
   - component: {fileID: 2473831971515794904}
-  - component: {fileID: 5777670708623997824}
-  - component: {fileID: 2370232585798815876}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Untagged
@@ -86,32 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5777670708623997824
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2450818699702910432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.296875, y: 0.046875, z: 0.390625}
-  m_Center: {x: 0.0078125, y: 0.0234375, z: 0.0390625}
---- !u!208 &2370232585798815876
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2450818699702910432}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.148, y: 0.023000002, z: 0.19500001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.008, y: 0.023000002, z: 0.039}
-  m_TimeToStationary: 0.5
