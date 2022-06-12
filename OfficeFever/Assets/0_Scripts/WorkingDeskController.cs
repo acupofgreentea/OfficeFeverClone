@@ -80,4 +80,9 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
         money.transform.position = spawnPosition;
     }
+
+    public void RemoveMoneyFromList(Transform money)
+    {
+        moneys.Remove(money);
+    }
 }
