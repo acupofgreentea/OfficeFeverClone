@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -13,6 +12,8 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
     [SerializeField] private float spawnRate = 0.5f;
 
+    [SerializeField] private PlayerMoneySO playerMoney;
+
     private PlayerController playerController;
 
     private int stackCount = 10;
@@ -21,21 +22,21 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
     private List<Transform> papers = new List<Transform>();
 
-    private void Awake() 
+    private void Awake()
     {
-        playerController = FindObjectOfType<PlayerController>();    
+        playerController = FindObjectOfType<PlayerController>();
     }
 
-    private void Start() 
+    private void Start()
     {
         InvokeRepeating(nameof(SpawnMoney), 0.0f, spawnRate);
     }
 
     public void Interact()
     {
-        if(papers.Count >= 30) return;
+        if (papers.Count >= 30) return;
 
-        if(playerController.papers.Count == 0) return;
+        if (playerController.papers.Count == 0) return;
 
         var playerTopPaper = playerController.papers[playerController.papers.Count - 1];
 
@@ -60,9 +61,9 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
     private void SpawnMoney()
     {
-        if(moneys.Count >= 30) return;
+        if (moneys.Count >= 30) return;
 
-        if(papers.Count == 0) return;
+        if (papers.Count == 0) return;
 
         var money = Instantiate(moneyPrefab);
 
@@ -81,8 +82,20 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
         money.transform.position = spawnPosition;
     }
 
-    public void RemoveMoneyFromList(Transform money)
+    private void OnEnable()
     {
+        playerMoney.OnMoneyCollected += RemoveMoneyFromList;
+    }
+
+    private void OnDisable()
+    {
+        playerMoney.OnMoneyCollected -= RemoveMoneyFromList;
+    }
+
+    public void RemoveMoneyFromList()
+    {
+        var money = moneys[moneys.Count - 1];
+
         moneys.Remove(money);
     }
 }

@@ -6,7 +6,7 @@ public class PlayerMoneySO : ScriptableObject
 {
     public int MoneyAmount {get; set;}
 
-    public Action OnMoneyCollected;
+    public event Action OnMoneyCollected;
 
     public void UpdateMoneyAmout(int addToMoney)
     {

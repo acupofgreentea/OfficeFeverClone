@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Money : MonoBehaviour, IInteractable
@@ -9,7 +10,7 @@ public class Money : MonoBehaviour, IInteractable
     public void Interact()
     {
         playerMoney.UpdateMoneyAmout(moneyAmount);
-        // remove from list
+        
         Destroy(gameObject);
     }
 }
