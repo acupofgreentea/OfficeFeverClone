@@ -7,12 +7,17 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI moneyText;
 
-    private void OnEnable() 
+    private void Start()
+    {
+        UpdateMoneyText();
+    }
+
+    private void OnEnable()
     {
         playerMoney.OnMoneyCollected += UpdateMoneyText;
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
         playerMoney.OnMoneyCollected -= UpdateMoneyText;
     }

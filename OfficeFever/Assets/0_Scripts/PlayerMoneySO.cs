@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Money", fileName = "Money")]
 public class PlayerMoneySO : ScriptableObject
 {
-    public int MoneyAmount {get; set;}
+    [field: SerializeField] public int MoneyAmount {get; set;}
 
     public event Action OnMoneyCollected;
 

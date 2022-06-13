@@ -1828,14 +1828,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 643884014, guid: 33a88f67890a6dc4e8a805d361261843, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.209
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693184474, guid: 33a88f67890a6dc4e8a805d361261843, type: 3}
-      propertyPath: playerMoney
-      value: 
-      objectReference: {fileID: 11400000, guid: 53a837665a12a5549bb5ef80434b9b62, type: 2}
     - target: {fileID: 762132156574349140, guid: 33a88f67890a6dc4e8a805d361261843, type: 3}
       propertyPath: m_Name
       value: WorkingDesk
