@@ -21,7 +21,7 @@ public class PrinterController : MonoBehaviour, IInteractable
         playerController = FindObjectOfType<PlayerController>();
     }
     
-    private void Start() 
+    private void OnEnable() 
     {
         InvokeRepeating(nameof(SpawnPapers), 0.0f, spawnRate);
     }

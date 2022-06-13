@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paper: {fileID: 2452510603487133980, guid: a411707698d5ed841b1b0511f9c1e382, type: 3}
   spawnPos: {fileID: 1932751497}
-  spawnRate: 0.2
+  spawnRate: 0.3
   stackCount: 10
 --- !u!1001 &341223742302033082
 PrefabInstance:

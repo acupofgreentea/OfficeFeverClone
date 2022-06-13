@@ -100,4 +100,5 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
         moneys.Remove(money);
     }
+
 }

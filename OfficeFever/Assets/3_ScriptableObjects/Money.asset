@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87074a9b6df33184aaa10360e54c9636, type: 3}
   m_Name: Money
   m_EditorClassIdentifier: 
-  <MoneyAmount>k__BackingField: 0
+  <MoneyAmount>k__BackingField: 410
