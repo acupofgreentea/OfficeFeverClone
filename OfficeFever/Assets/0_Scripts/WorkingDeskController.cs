@@ -22,6 +22,8 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
     private List<Transform> papers = new List<Transform>();
 
+    public List<Transform> Papers {get => papers; set => papers = value;}
+
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerController>();
