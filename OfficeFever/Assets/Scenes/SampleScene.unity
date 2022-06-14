@@ -918,7 +918,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
       propertyPath: m_text
-      value: 200
+      value: $200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_fontSize
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_lineSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_overflowMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_horizontalMapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
       propertyPath: m_enableWordWrapping
@@ -1954,6 +1986,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_text
+      value: $10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_fontSize
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_overflowMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305543701676330227, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7253384359772438315, guid: 39f12e59dc00c194da9c7408f7885667, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2012,6 +2072,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2694733134031588888, guid: f0305cfdd5163aa49a2c7ab7af733cd9, type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694733134031588888, guid: f0305cfdd5163aa49a2c7ab7af733cd9, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
@@ -2063,5 +2127,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2612346703579903676, guid: f0305cfdd5163aa49a2c7ab7af733cd9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0305cfdd5163aa49a2c7ab7af733cd9, type: 3}

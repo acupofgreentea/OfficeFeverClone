@@ -21,7 +21,7 @@ public class BuyAreaController : MonoBehaviour
 
     private void Awake()
     {
-        buyAmountText.text = buyAmount.ToString();
+        buyAmountText.text = $"${buyAmount}";
 
         uiManager = FindObjectOfType<UIManager>();
     }
@@ -34,6 +34,8 @@ public class BuyAreaController : MonoBehaviour
 
         if(interactionTime >= timeTobuy)
         {
+            if(playerMoney.MoneyAmount < buyAmount) return;
+
             var desk = Instantiate(deskToSpawn);
 
             desk.transform.position = transform.position;

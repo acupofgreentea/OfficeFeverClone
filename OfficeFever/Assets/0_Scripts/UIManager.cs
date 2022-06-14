@@ -24,6 +24,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateMoneyText()
     {
-        moneyText.text = playerMoney.MoneyAmount.ToString();
+        moneyText.text = $"${playerMoney.MoneyAmount}";
     }
 }

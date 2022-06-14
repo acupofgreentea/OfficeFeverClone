@@ -61,7 +61,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Quaternion CalculateRotation()
     {
-        return Quaternion.LookRotation(CalculateDirection(), Vector3.up);
+        if(CalculateDirection() != Vector3.zero)
+            return Quaternion.LookRotation(CalculateDirection(), Vector3.up);
+        else
+            return Quaternion.identity;
     }
 
     private Vector3 CalculateDirection()
