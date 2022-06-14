@@ -12,6 +12,8 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
     [SerializeField] private float spawnRate = 0.5f;
 
+    [SerializeField] private int maxPapaerCapacity = 50;
+
     [SerializeField] private PlayerMoneySO playerMoney;
 
     private PlayerController playerController;
@@ -36,7 +38,7 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (papers.Count >= 30) return;
+        if (papers.Count >= maxPapaerCapacity) return;
 
         if (playerController.papers.Count == 0) return;
 
@@ -82,22 +84,12 @@ public class WorkingDeskController : MonoBehaviour, IInteractable
         Destroy(topPaper.gameObject, 0.3f);
 
         money.transform.position = spawnPosition;
+
+        money.parent = transform;
     }
 
-    private void OnEnable()
+    public void RemoveMoneyFromList(Transform money)
     {
-        playerMoney.OnMoneyCollected += RemoveMoneyFromList;
-    }
-
-    private void OnDisable()
-    {
-        playerMoney.OnMoneyCollected -= RemoveMoneyFromList;
-    }
-
-    public void RemoveMoneyFromList()
-    {
-        var money = moneys[moneys.Count - 1];
-
         moneys.Remove(money);
     }
 
